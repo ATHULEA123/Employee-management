@@ -1,0 +1,150 @@
+<div class="add-employee" id="employeeform">
+
+    <div class="section card  edit_card rounded-4  px-3 ">
+        <header class="header">
+            <h4 class=" head ps-2 pt-4 pb-2">Add Employeee</h4>
+            <div class="form-close d-flex justify-content-end">
+                <button class="close-btn" onclick="formclose()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </header>
+
+
+        <div class="upload text-center my-2 py-3 rounded-3 bg-light mb-4">
+            <label for="exampleInputfile">
+                <i class="fa-solid fa-upload"></i>
+
+                <h6>Upload Image</h6>
+
+                <input type="file" class="form-control rounded-4 file" onchange="addImagecall()" id="exampleInputfile"
+                    accept="image/jpg,image/jpeg,image/png" name="image">
+                <img src="" id="imginfo" alt="" height="100px">
+                <p>png/jpg files are allowed</p>
+            </label>
+
+        </div>
+
+
+
+        <form action="" id="postForm" onsubmit="validateForm()">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 ">
+                    <label class="form-label mb-3" for="salutation">salutation</label>
+                    <select class="form-control  form-select mb-3" id="salutation">
+                        <option value="">select</option>
+                        <option value="mr">MR</option>
+                        <option value="mrs">MRS</option>
+                        <option value="kumari">DR</option>
+                    </select>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-md-4 col-lg-4 mb-3">
+                    <label for="firstName" class="form-label mb-3">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="john">
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-md-4 col-lg-4 mb-3 ">
+                    <label for="lastName" class="form-label mb-3">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                    <div class="errorMsg"></div>
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control rounded-4" id="email" placeholder="sample@gmail.com">
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <label for="phone" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control rounded-4" id="phone" placeholder="Enter your Number">
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 mb-3">
+                    <label for="dob" class="form-label ">Date of Birth</label>
+                    <input type="date" class="form-control rounded-4 dob" id="dob" placeholder="Select your Birth">
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-lg-6 col-md-12   ">
+                    <label for="gender" class="form-label mb-4">Gender</label>
+                    <div class="d-flex gap-4 ">
+                        <div class="form-check mb-3 ">
+                            <input class="form-check-input" type="radio" name="gender" id="maleradio" value="Male">
+                            <label class="form-check-label" for="maleradio">Male</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="gender" id="femradio" value="Female">
+                            <label class="form-check-label" for="femradio">Female</label>
+                        </div>
+                    </div>
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <label for="qulafi" class="form-label">qualification</label>
+                    <input type="text" class="form-control d rounded-4" id="qulafi" placeholder="enter qualification">
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control d rounded-4" id="password" placeholder="">
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mb-3">
+                    <label for="address" class="form-label">address</label>
+                    <input type="text" class="form-control d rounded-4" id="address" placeholder="enter address">
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <label class="form-label " for="country">Country</label>
+                    <select class="form-control form-select" id="country">
+                        <option>select</option>
+                        <option value="india">INDIA</option>
+                        <option value="china">CHINA</option>
+                        <option value="pakisthan">PAKISTHAN</option>
+                    </select>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <label class="form-label " for="state">State</label>
+                    <select class="form-control form-select" id="state">
+                        <option>select</option>
+                        <option value="kerala">KERALA</option>
+                        <option>IL</option>
+                        <option>TX</option>
+                    </select>
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="row mt-3 mb-4">
+                <div class="col-lg-6 mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter City">
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-lg-6 ">
+                    <label for="pin" class="form-label">Pin/Zip</label>
+                    <input type="text" class="form-control" id="pin" placeholder="Enter zip/pin">
+                    <div class="errorMsg"></div>
+                </div>
+            </div>
+            <div class="add-btn mb-3">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-light me-md-2" type="button" onclick="formclose()">Cancel</button>
+                    <button onclick="add()" class="btn btn-primary" type="button" id="submitButton">Add
+                        Employee</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</div>

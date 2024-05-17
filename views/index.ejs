@@ -1,0 +1,171 @@
+<%- include('include/header') %>
+
+
+
+
+    <div class="body-container">
+        <div class="main d-flex ">
+            <!-- side barrrrrrrrrrrrrrrrrrrrr -->
+
+
+
+            <%- include('include/sidebar') %>
+
+                <%- include('include/logout') %>
+
+
+                    <div class="clientside_sectn">
+
+
+                        <%- include('include/searchbar') %>
+
+                            <div class="card mb-3">
+                                <div class="title d-flex justify-content-between mb-4">
+                                    <div class="empolyee-list d-flex gap-3 align-items-center">
+                                        <h4 class="ms-2">Employee List</h4>
+                                        <select class="form-select selct" aria-label="select example"
+                                            id="floatingselect">
+
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+
+                                            <option value="5" selected>5</option>
+                                        </select>
+                                        <span id="totalemployeee"> of 10</span>
+                                    </div>
+                                    <div class="add-btn">
+                                        <button type="button" class="btn add btn-primary rounded-4"
+                                            onclick="formopen()">Add
+                                            Employee</button>
+                                    </div>
+                                </div>
+                                <table class="table" id="table">
+
+                                    <thead class="table-heading">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col">Email<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col">Phone<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col">Gender<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col">DOB<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col">COUNTRY<i class="fa-solid fa-angle-down"></i></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body" id="user-detial-body">
+
+
+
+                                        <tr>
+                                            <th scope="row"># 01</th>
+                                            <td><img src="image/Rectangle 346.png" alt=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-secondary dropdown-" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#"><i
+                                                                    class="fa-regular fa-eye"></i> View
+                                                                Details</a></li>
+                                                        <li><a class="dropdown-item" href="#"
+                                                                onclick="editformopen()"><i
+                                                                    class="fa-solid fa-pencil"></i>
+                                                                Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#"><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                                Delete</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="side-pagination">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination d-flex gap-2" id="pagination">
+
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="footer-end ">
+                                <div class="copy-right">
+                                    <h5>© 2023 All Rights Reserved. Stackup</h5>
+                                </div>
+                                <div class="link">
+                                    <a href="#">Term Of Use</a>
+                                    <a href="#">Privacy Policy</a>
+                                </div>
+                            </div>
+                    </div>
+        </div>
+
+        <!-- success -->
+
+
+
+        <!-- next pageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+
+
+        <!-- from   -->
+
+
+
+        <%- include('include/addemployeeform') %>
+
+
+
+
+
+
+
+
+            <!-- edit employeeeee pageeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+
+            <%- include('include/editemployeeform') %>
+
+
+
+
+                <!-- deleteeee psgeeeeeeeeeee -->
+
+
+
+
+                <%- include('include/deleteForm') %>
+
+
+
+
+                    <!-- viewww detialsss pageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+
+
+
+
+    </div>
+    <div id="overlay"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </body>
+
+    </html>

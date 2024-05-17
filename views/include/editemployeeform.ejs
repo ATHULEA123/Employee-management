@@ -1,0 +1,147 @@
+<div class="edit-employee" id="editemployeeform">
+
+    <div class="section card rounded-4  px-3 ">
+        <header class="header">
+            <h4 class=" head ps-2 pt-4 pb-2">Edit Employeee</h4>
+            <div class="form-close d-flex justify-content-end">
+                <button class="close-btn" onclick="editformclose()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </header>
+
+        <div class="upload-page d-flex gap-3">
+            <div class="upload-sectn text-center my-2 py-3 rounded-3 bg-light mb-4">
+                <div class="upload-img">
+                    <input type="file" id="exampleInputfile" class="file" name="image">
+                    <img src="" alt="" id="changeImg" width="100px" height="100px">
+
+                </div>
+
+            </div>
+
+            <label for="exampleInputfile" type="button" class="upload-btn btn-light mt-5">Change</label>
+
+        </div>
+
+        <form id="formedit">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 ">
+                    <label class="form-label mb-3" for="edit-salutation">salutation</label>
+                    <select class="form-control form-select mb-3 " id="edit-salutation">
+                        <option selected>select</option>
+                        <option value="mr">MR</option>
+                        <option value="mrs">MRS</option>
+                        <option value="kumari">DR</option>
+                    </select>
+                    <div class="editerrormsg"></div>
+                </div>
+                <div class="col-md-4 col-lg-4 mb-3">
+                    <label for="edit-FirstName" class="form-label mb-3">First Name</label>
+                    <input type="text" class="form-control" id="edit-FirstName" placeholder="john">
+                    <div class="editerrormsg"></div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 mb-3 ">
+                    <label for="edit-lastName" class="form-label mb-3">Last Name</label>
+                    <input type="text" class="form-control" id="edit-lastName" placeholder="Doe">
+                    <div class="editerrormsg"></div>
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <label for="edit-email" class="form-label">Email address</label>
+                    <input type="email" class="form-control rounded-4" id="edit-email" placeholder="sample@gmail.com">
+                    <div class="editerrormsg"></div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <label for="edit-phone" class="form-label">Mobile Number</label>
+                    <input type="number" class="form-control rounded-4" id="edit-phone" placeholder="Enter your Number">
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 mb-3">
+                    <label for="edit-dob" class="form-label ">Date of Birth</label>
+                    <input type="date" class="form-control rounded-4 dob" id="edit-dob" placeholder="Select your Birth">
+                    <div class="editerrormsg"></div>
+                </div>
+                <div class="col-lg-6 col-md-12   ">
+                    <label for="radio" class="form-label mb-4">Gender</label>
+                    <div class="d-flex gap-4 ">
+                        <div class="form-check mb-3 ">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="edit-maleradio"
+                                value="Male">
+                            <label class="form-check-label" for="edit-maleradio">Male</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="edit-femradio"
+                                value="Female">
+                            <label class="form-check-label" for="edit-femradio">Female</label>
+                        </div>
+                    </div>
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mb-3">
+                    <label for="edit-qualifications" class="form-label">qualification</label>
+                    <input type="text" class="form-control d rounded-4" id="edit-qualifications"
+                        placeholder="qualification">
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mb-3">
+                    <label for="edit-address" class="form-label">address</label>
+                    <input type="text" class="form-control d rounded-4" id="edit-address" placeholder="enter address">
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <label class="form-label " for="edit-country">Country</label>
+                    <select class="form-control form-select " id="edit-country">
+                        <option>select</option>
+                        <option>INDIA</option>
+                        <option>CHINA</option>
+                        <option>USA</option>
+                        <option>PAKISTHAN</option>
+                    </select>
+                    <div class="editerrormsg"></div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <label class="form-label " for="edit-state">State</label>
+                    <select class="form-control form-select" id="edit-state">
+                        <option>select</option>
+                        <option>KERALA</option>
+                        <option>IL</option>
+                        <option>TX</option>
+                    </select>
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="row mt-3 mb-4">
+                <div class="col-lg-6 mb-3">
+                    <label for="edit-city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="edit-city" placeholder="Enter City">
+                    <div class="editerrormsg"></div>
+                </div>
+                <div class="col-lg-6 ">
+                    <label for="edit-pinzip" class="form-label">Pin/Zip</label>
+                    <input type="text" class="form-control" id="edit-pinzip" placeholder="Enter zip/pin">
+                    <div class="editerrormsg"></div>
+                </div>
+            </div>
+            <div class="add-btn mb-4">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-light me-md-2" type="button" onclick="editformclose()">Cancel</button>
+                    <button class="btn btn-primary" onclick="employeeedit()" id="savebtn">Save Changes</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+</div>

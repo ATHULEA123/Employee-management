@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:"poppins",sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/image/loginpage.png.jpg);
+    /* background: no-repeat; */
+    background-size: cover;
+}
+.wrapper{
+    width: 420px;
+    background-color: rgb(51, 71, 71);
+    color: #fff;border-radius: 12px;
+   
+   padding: 30px;
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.input-wrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: rgb(34, 32, 32);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+   
+    margin-bottom: 20px;
+  }
+  
+  .input-wrapper input:focus {
+    outline-color: rgb(40, 38, 38);
+  }
+.remember label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+.remember a{
+    color: #fff;
+   
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    justify-content: center;
+    display: flex;
+}
+
+button,
+button:focus {
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  margin-top: 20px;
+}
+
+button:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+.registerlink{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+.registerlink p a{
+    color: #b8b6c4;
+    text-decoration: none;
+}
+
+.registerlink p a:hover{
+    text-decoration: underline;
+}
+
